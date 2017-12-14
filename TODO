@@ -1,3 +1,4 @@
-[!]   Detect the website which the keylogger is operating on.
-[!]   Detect input fields' IDs.
-[!]   Beautify log file (e.g. organize entries by logging time).
+[DONE]   Detect the website which the keylogger is operating on.
+[DONE]   Detect input fields' names.
+[DONE]   Beautify log file (e.g. organize entries by logging time).
+[!]      Add encryption.
